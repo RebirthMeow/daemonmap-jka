@@ -1,0 +1,48 @@
+# --- inherited from upstream daemonmap ---
+*.[oda]
+.idea/
+.settings
+build/
+vcpkg/
+games/
+install/
+
+# --- JKA fork additions ---
+
+# Build artifacts (Windows MSYS2 / VS / CMake)
+build_backup/
+install_linux/
+install_backup/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.obj
+
+# Map I/O — users supply their own .bsp; outputs are generated.
+# A single sample (test map/maps/mp/ctf_kejim.bsp) is intentionally tracked
+# as a smoke-test fixture; everything else under test map/ is gitignored.
+test map/*.bsp
+test map/*.nav
+test map/*.navMesh
+test map/*.nav_connections
+test map/*.pk3
+test map/levelshots/
+test map/maps/mp/*.nav
+test map/maps/mp/*.navMesh
+test map/maps/mp/*.nav_connections
+test map/maps/mp/all/
+test map/scripts/
+test map/textures/
+
+# Windows / editor cruft
+Thumbs.db
+*.swp
+.vscode/
+
+# vcpkg local install
+vcpkg/buildtrees/
+vcpkg/downloads/
+vcpkg/packages/

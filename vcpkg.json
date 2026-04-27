@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "daemonmap",
+  "version-string": "1.0.0",
+
+  "$comment": [
+    "NOTE: The recommended Windows build path is MSYS2/MinGW-w64, NOT vcpkg+MSVC.",
+    "Run build.ps1 (PowerShell) or build-msys2.sh (MSYS2 terminal) instead.",
+    "",
+    "This file is provided for future MSVC support. If you do attempt an MSVC build,",
+    "you will also need to fix threading (the code uses pthreads on POSIX and Win32",
+    "threads via GDEF_OS_WINDOWS — MSVC needs the latter path wired in CMake).",
+    "",
+    "Full dep list for vcpkg if pursuing the MSVC route:",
+    "  glib  (pulls in pcre2, zlib, libffi, gettext)",
+    "  libxml2",
+    "  minizip"
+  ],
+
+  "dependencies": [
+    "glib",
+    "libxml2",
+    "minizip",
+    "zlib",
+    "pcre2"
+  ]
+}
